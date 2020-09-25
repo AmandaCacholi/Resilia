@@ -1,0 +1,223 @@
+@font-face {
+    font-family: Raleway-Bold; src:url(Raleway-Bold.ttf);
+}
+
+@font-face {
+    font-family: Raleway-Regular; src: url(Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: LuloClean; src: url(LuloClean.ttf);
+}
+
+.cabecalho-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2f2e22;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.Logo a {
+    text-decoration: none;
+}
+
+.Logo a .Resilia {
+    font-family: LuloClean;
+    color: #FAD000;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.Logo .flix {
+    font-family: Raleway-Bold;
+    font-size: 30px;
+    border: solid 2px #FAD000;
+    border-radius: 5px;
+    padding: 1px 6px 1px 6px;
+    color: #2f2e22;
+    background: #FAD000;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.box {
+    border: solid 2px #FAD000;
+    border-radius: 5px;
+    background: #FAD000;
+    margin-left: 30px;
+    color: #2f2e22;
+    font-family: Raleway-Bold;
+    font-size: 15px;
+    padding: 2px 6px 2px 6px;
+}
+
+.box:hover {
+    background: #2f2e22;
+    color: #FAD000;
+    transition: 0.4s;
+}
+
+.searchbar {
+    border: none;
+    background: #2f2e22;
+    padding: 6px 6px 6px 6px;
+    outline: none;
+    width: 1%;
+    color: white;
+    cursor: pointer;
+}
+
+.searchbar[type=text] {
+    transition: width 0.4s ease-in-out;
+    background-image: url(imagens/lupa.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+.searchbar[type=text]:focus {
+    width: 15%;
+    border-bottom: #FAD000 solid 2px;
+    cursor: text;
+}
+
+.login {
+    border: solid 2px #FAD000;
+    border-radius: 5px;
+    background: #2f2e22;
+    color: #FAD000;
+    font-family: Raleway-Bold;
+    font-size: 15px;
+    padding: 2px 6px 2px 6px;
+}
+
+.login:hover {
+    background: #FAD000;
+    color: #2f2e22;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FAD000;
+    width: 200px;
+    height: 220px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content label {
+    font-family: Raleway-Regular;
+    font-size: 14px;
+}
+
+.dropdown-content input {
+    padding: 10px 6px 10px 6px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    outline: none;
+    width: 94%;
+    margin-top: 10px;
+}
+
+.dropdown-content input[type=password] {
+    margin-top: 20px;
+}
+
+.EsqueceuSenha {
+    text-decoration: underline;
+    font-family: Raleway-Regular;
+    font-size: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+.dropdown-content input[type=button] {
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #2f2e22;
+    font-size: 14px;
+    color: #FAD000;
+    font-family: Raleway-Bold;
+    border-radius: 5px;
+}
+
+.dropdown-content input[type=button]:hover {
+    background: #FAD000;
+    font-size: 16px;
+    color: #2f2e22;
+    border: #2f2e22 solid 2px;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.cadastro {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Raleway-Regular;
+    font-size: 13px;
+    text-align: center;
+    border-top: #2f2e22 1px solid;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.cadastro span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.rodape {
+    background: #2f2e22;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.rodape-social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.rodape .rodape-social-media .social img {
+    width: 32px;
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+.copyright {
+    color: #FAD000;
+    text-align: center;
+    font-size: 12px;
+    font-family: Raleway-Regular;
+}
