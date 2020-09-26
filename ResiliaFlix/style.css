@@ -195,12 +195,113 @@
     display: block;
 }
 
+main {
+    background: black;
+}
+
+.texto-principal {
+    font-size: 40px;
+    font-family: Raleway-Regular;
+    text-align: center;
+    padding: 100px 200px;
+    background: #FAD000;
+}
+
+.series {
+    color: white;
+    font-size: 25px;
+    font-family: Raleway-Bold;
+    margin: 30px 200px;
+}
+
+.series:hover {
+    cursor: pointer;
+    color: #FAD000;
+    transition: 0.4s;
+}
+
+.container-series {
+    width: 100%;
+}
+
+.series-todas {
+    width: 1070px;
+    height: 738px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.series-todas .serie img {
+    width: 210px;
+    height: 315px;
+    border: white solid 5px;
+    border-radius: 5px;
+    margin: 17px 17px;
+    cursor: pointer;
+}
+
+.series-todas .serie img:nth-child(4n+1) {
+    margin-left: 21px;
+}
+
+.series-todas .serie img:hover {
+    border: #FAD000 solid 5px;
+    transition: 0.5s;
+}
+
+.filmes {
+    color: white;
+    font-size: 25px;
+    font-family: Raleway-Bold;
+    margin: 30px 200px;
+    background: black;
+}
+
+.filmes:hover {
+    cursor: pointer;
+    color: #FAD000;
+    transition: 0.4s;
+}
+
+.container-filmes {
+    width: 100%;
+}
+
+.filmes-todos {
+    width: 1070px;
+    height: 738px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.filmes-todos .filme img {
+    width: 210px;
+    height: 315px;
+    border: white solid 5px;
+    border-radius: 5px;
+    margin: 17px 17px;
+    cursor: pointer;
+}
+
+.filmes-todos .filme img:nth-child(4n+1) {
+    margin-left: 21px;
+}
+
+.filmes-todos .filme img:hover {
+    border: #FAD000 solid 5px;
+    transition: 0.5s;
+}
+
 .rodape {
     background: #2f2e22;
     padding-bottom: 20px;
     padding-top: 20px;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 
