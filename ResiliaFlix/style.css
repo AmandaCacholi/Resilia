@@ -225,13 +225,11 @@ main {
 }
 
 .series-todas {
-    width: 1070px;
-    height: 738px;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    
+    justify-content: space-evenly;
 }
 
 .series-todas .serie img {
@@ -241,10 +239,6 @@ main {
     border-radius: 5px;
     margin: 17px 17px;
     cursor: pointer;
-}
-
-.series-todas .serie img:nth-child(4n+1) {
-    margin-left: 21px;
 }
 
 .series-todas .serie img:hover {
@@ -271,13 +265,11 @@ main {
 }
 
 .filmes-todos {
-    width: 1070px;
-    height: 738px;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    
+    justify-content: space-evenly;
 }
 
 .filmes-todos .filme img {
@@ -321,4 +313,63 @@ main {
     text-align: center;
     font-size: 12px;
     font-family: Raleway-Regular;
+}
+
+/*parte mobile*/
+@media (max-width: 780px) {
+    .cabecalho-principal {
+        padding: 50px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .Logo {
+        margin-bottom: 25px;
+    }
+    .Logo a .Resilia {
+        font-size: 25px;
+    }
+    .Logo .flix {
+        font-size: 27px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .box {
+        text-align: center;
+        padding: 6px 6px;
+        margin: 10px 0 0;
+    }
+
+    .quarta {
+        margin-bottom: 20px;
+    }
+    .searchbar[type="text"] {
+        position: absolute;
+        right: 26px;
+        background-size: 29px;
+    }
+    .texto-principal {
+        font-size: 20px;
+        padding: 40px 40px;
+    }
+    .series {
+        font-size: 20px;
+        margin: 20px 50px;
+    }
+    .series-todas .serie img {
+        width: 105px;
+        height: 157px;
+        margin: 5px 5px;
+    }
+    .filmes {
+        font-size: 20px;
+        margin: 20px 50px;
+    }
+    .filmes-todos .filme img {
+        width: 105px;
+        height: 157px;
+        margin: 5px 5px;
+    }
 }
