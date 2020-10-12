@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<script>
+    function cifraComCifraDeCesar(deslocamento, mensagem) {
+        var mensagemEncriptada = "";
+        var recebeNum = 0;
+        for (var i = 0; i < mensagem.length; i++) {
+            recebeNum = mensagem[i].charCodeAt();
+            mensagemEncriptada += String.fromCharCode(recebeNum + deslocamento)
+        }
+        return mensagemEncriptada;
+    }
+
+    function decifraCifraDeCesar(deslocamento, mensagemCifrada) {
+        var mensagemDecifrada = "";
+        var recebeNum = 0;
+        for (var i = 0; i < mensagemCifrada.length; i++){
+            recebeNum = mensagemCifrada[i].charCodeAt();
+            mensagemDecifrada += String.fromCharCode(recebeNum - deslocamento)
+        }
+        return mensagemDecifrada;
+    }
+
+    console.log(cifraComCifraDeCesar(3, "HELP"));
+    console.log(decifraCifraDeCesar(3, "KHOS"));
+
+</script>
+
+</html>
