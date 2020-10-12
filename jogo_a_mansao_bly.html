@@ -1,0 +1,87 @@
+<html>
+<meta charset="UTF-8">
+
+<body style="background: black;">
+    <header>
+        <h1 style="text-align: center; width: 100%; color: white; padding: 20px 0; font-family: Impact; font-size: 50px;">A mansão Bly</h1>
+    </header>
+    
+    <main>
+        <p style="padding: 20px 20%; font-family: Cambria; font-size: 20px; color: white; text-align: justify;">Dani é uma professoa que se muda para Inglaterra querendo conhecer o mundo, ao chegar lá, se candidata à uma vaga de emprego onde deve cuidar e ensinar duas crianças orfãs. Ela consegue o emprego e se muda para uma mansão chamada Bly, em uma cidade do mesmo nome no interior da Inglaterra. Ela logo fica encantada com a beleza da região e da mansão que agora pode chamar de seu novo lar.<br><br>Dani conhece as crianças, Flora e Miles e todos se dão muito bem. Á noite, quando Dani vai colocá-los para dormir, Flora de repente fica séria, e pede para que Dani prometa que não sairá do seu quarto durante a noite; Dani exita, mas logo cede ao seu pedido, dizendo que promete não sair pelo menos na primeira noite.<br><br>O jogo possui dez finais, quatro são escondidos. Você consegue encontrar todos?</p>
+        <button style="width: 60%; padding: 20px 0; font-family: Cambria; font-size: 25px; margin-left: 20%; cursor: pointer;">Começar</button>
+    <script>
+
+        var body = document.querySelector('body');
+
+        function comecar (){
+            pergunta1 = prompt("Dani acorda no meio da noite com muita vontade de ir ao banheiro, mas lembra-se da promessa que fez para Flora. \n \nEla vai ao banheiro mesmo assim?\n \nDigite:\n1 para sim;\n2 para não.");
+            
+            if (pergunta1 == '1'){
+                pergunta2 = prompt("Enquanto ela anda pelos corredores, ouve passos mas não vê ninguém. \n \nEla volta para o quarto?\n \nDigite:\n1 para sim;\n2 para não.");
+
+                if(pergunta2 == '1'){
+                    alert('Ela deita na cama e tenta segurar até o dia amanhecer; no dia seguinte Flora fica satisfeita com ela por não ter quebrado a promessa.\n \nDani está salva.\n\nJogue novamente.');
+                    alert("Jogue novamente.");
+                }
+
+                if(pergunta2 =='2'){
+                    pergunta3 = prompt("Ela chega até o banheiro, fecha a porta e acende a luz e dá de cara com uma mulher de longos cabelos negros molhados e sem feições no rosto, andando em direção a ela.\nEla tenta abrir a porta mas está emperrada, mas continua tentando enquanto grita.\n\nChega alguém para ajudá-la?\n \nDigite:\n1 para sim;\n2 para não.");
+
+                    if (pergunta3 == '1'){
+                        alert('A governanta da casa chega e abre a porta, ela sai do banheiro e conta o que aconteceu, a governanta verifica o banheiro e não vê nada, cada uma volta para o seu quarto. \nNa manhã seguinte Flora fala de forma misteriosa "você não deveria ter saído, agora ela te conhece".\n \nDani está salva... por enquanto.');
+                        alert("Jogue novamente.");
+                    }
+                    else if(pergunta3 == '2'){
+                        alert('A mulher a estrangula, levantando-a contra a porta, até que ela perde a consciência lentamente.\nSeu corpo é arrastado até a floresta, onde a mulher a esconde. \n\nDani está morta.');
+                        alert("Jogue novamente.");
+                    }
+                    else {
+                        alert("Dani pega uma escova de dente e enfia no olho da mulher, tenta abrir a porta de novo e consegue; ela corre até seu quarto.\nNo dia seguinte Flora está chateada com Dani e diz 'Você não deveria ter saído, agora ela te conhece.'\n \nDani está salva... por enquanto.")
+                        alert("Jogue novamente.");
+                    }
+                }
+                else  {
+                    alert("Dani demora demais para tomar uma decisão, uma mulher de longos cabelos negros molhados vem correndo em sua direção, então agarra Dani pelo pescoço, a arrasta até a escadaria e a joga. Dani cai escada abaixo, na queda ela quebra o pescoço.\n \nDani está morta.");
+                    alert("Jogue novamente.");
+                }
+
+            }
+            else if (pergunta1 == '2'){
+                pergunta4 = prompt("Ela fica deitada na cama e espera até o dia amanhecer; na manhã seguinte Flora está feliz com ela por ter cumprido a promessa. \nA noite chega de novo e ela vai dormir, até que acorda quando ouve um grito.\n\nEla sai para ver o que é?\n \nDigite:\n1 para sim;\n2 para não.");
+
+                if (pergunta4 == '1'){
+                    pergunta5 = prompt('Ela corre até o quarto das crianças mas os dois estão dormindo tranquilamente.\nQuando vira-se para voltar ao seu quarto, é surpreendida por uma mulher de longos cabelos negros molhados. Ela a pega pelo pescoço e a levanta, ela fica tentando fazer com que ela a solte.\n \nEla consegue se soltar?\n \nDigite:\n1 para sim;\n2 para não.');
+                
+                    if (pergunta5 == '1'){
+                        alert('Ela volta correndo para o quarto e tranca a porta, deita na cama e demora até cair no sono de novo. No dia seguinte Flora diz com um olhar misterioso "Não caia nos truques dela na próxima vez, agora ela te conhece."\n \nDani está salva... por enquanto.');
+                        alert("Jogue novamente.");
+                    }
+                    else if (pergunta5 == '2'){
+                        alert('A mulher a estrangula até que ela começa a perder a consciência lentamente.\nSeu corpo é arrastado até a floresta, onde a mulher a esconde.\n \nDani está morta.');
+                        alert("Jogue novamente.");
+                    }
+                    else {
+                        alert("Dani levanta-se da cama e vai até a janela, perto do lago ela vê uma silhueta que parece a de uma mulher.\nQuando ela se vira para o lado, vê uma mulher de longos cabelos negros molhados. A mulher fica parada olhando para Dani sem fazer nada, até que abre a boca e diz com uma voz rouca 'pule.' Dani é tomada por um desejo que não é seu, então abre a janela e pula.\n \nDani está morta.");
+                        alert("Jogue novamente.");
+                    }
+                }
+                else if (pergunta4 == '2'){
+                    alert("Ela se sente culpada, mas fica paralizada de medo na cama. No dia seguinte todos estão bem e ninguém ouviu grito nenhum. \nFlora está feliz com ela por cumprir sua promessa.\n \nDani está salva.");
+                    alert("Jogue novamente.");
+                }
+            }
+            else{
+                alert("Dani levanta-se da cama e vai até a janela, perto do lago ela vê uma silhueta que parece a de uma mulher. \nQuando ela se vira, vê uma mulher de longos cabelos negros molhados. Antes que possa fazer qualquer coisa, a mulher pega Dani pelo pescoço e pula com ela pela janela. Ela então coloca uma corda em seu pescoço, Dani se debate até que lentamente perde a consciência.\n \nDani está morta.");
+                alert("Jogue novamente.");
+            }
+        }
+
+
+        var button = document.querySelector("button");
+        button.onclick = comecar;
+
+
+    </script>
+    </main>
+</body>
+</html>
