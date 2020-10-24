@@ -7,15 +7,14 @@
 
 <body style="background: black;">
     <header>
-        <h1
-            style="text-align: center; width: 100%; color: white; padding: 5px 0; font-family: Impact; font-size: 50px;">
-            A mansão Bly</h1>
     </header>
 
     <main>
         <div class="bg"
-            style="background-image: url('https://i1.wp.com/cibersistemas.pt/wp-content/uploads/2020/10/3745152-00hed.jpg?fit=1280%2C720&ssl=1'); background-repeat: no-repeat; background-position: center;">
+            style="background-image: url('https://i1.wp.com/cibersistemas.pt/wp-content/uploads/2020/10/3745152-00hed.jpg?fit=1280%2C720&ssl=1'); background-repeat: no-repeat; background-position: center; background-size: 111%;">
             <div class="bg_cor" style="padding: 20px 0;">
+                <h1 style="text-align: center; width: 100%; color: white; padding: 5px 0; font-family: Impact; font-size: 50px;">
+                    A mansão Bly</h1>
                 <p class="text"
                     style="padding: 40px 5%; margin: 60px 15%; font-family: Cambria; font-size: 20px; text-align: justify; background-color: rgba(255,255,255,0.6); border-radius: 20px;">
                     Dani é
@@ -36,7 +35,7 @@
                     escondidos. Você consegue encontrar todos?
                 </p>
 
-                <input type="text" class="input" style="font-size: 20px; border-style: none; background: none; outline: none; width: 10%; margin: 0 45% 10px; padding: 10px 0; font-weight: bold; text-align: center;"><br>
+                <input type="text" class="input" style="font-size: 20px; border-style: none; background: none; outline: none; width: 10%; margin: 0 45% 10px; padding: 10px 0; font-weight: bold; text-align: center; color: white;"><br>
 
                 <button class="botao"
                     style="width: 60%; padding: 20px 0; font-family: Cambria; font-size: 25px; margin-left: 20%; cursor: pointer; margin-bottom: 50px; border-radius: 20px; border: none;">Começar</button>
@@ -49,7 +48,7 @@
 
             function comecar() {
 
-                pergunta1 = document.querySelector('.text').textContent = ("Dani acorda no meio da noite com muita vontade de ir ao banheiro, mas lembra-se da promessa que fez para Flora. \n \nEla vai ao banheiro mesmo assim?\n \nDigite:\n1 para sim;\n2 para não.");
+                pergunta1 = document.querySelector('.text').innerHTML = ("Dani acorda no meio da noite com muita vontade de ir ao banheiro, mas lembra-se da promessa que fez para Flora. <br><br>Ela vai ao banheiro mesmo assim?<br><br>Digite:<br>1 para sim;<br>2 para não.");
 
                 input2 = document.querySelector('.input');
                 input2.focus();
@@ -59,7 +58,7 @@
                 function perguntas1() {
 
                     if (input2.value == '1') {
-                        pergunta1_1 = document.querySelector('.text').textContent = ("Enquanto ela anda pelos corredores, ouve passos mas não vê ninguém. \n \nEla volta para o quarto?\n \nDigite:\n1 para sim;\n2 para não.");
+                        pergunta1_1 = document.querySelector('.text').innerHTML = ("Enquanto ela anda pelos corredores, ouve passos mas não vê ninguém. <br><br>Ela volta para o quarto?<br><br>Digite:<br>1 para sim;<br>2 para não.");
 
                         function perguntas2() {
 
@@ -67,15 +66,17 @@
 
                                 removeInput = input2.remove();
 
-                                final2 = document.querySelector('.text').textContent = ('Ela deita na cama e tenta segurar até o dia amanhecer; no dia seguinte Flora fica satisfeita com ela por não ter quebrado a promessa.\n \nDani está salva.\n\nJogue novamente.');
+                                final2 = document.querySelector('.text').innerHTML = ('Ela deita na cama e tenta segurar até o dia amanhecer; no dia seguinte Flora fica satisfeita com ela por não ter quebrado a promessa.<br><br>Dani está salva.');
 
-                                var button = document.querySelector("button").textContent = ("Jogue Novamente");
-                                button.onclick = jogueNovamente;
+                                var button = document.querySelector("button").textContent = ("Jogue novamente");
+                                button.onclick = function(){
+                                    document.location.reload(true);
+                                }
 
 
                             }
                             else if (input2.value == '2') {
-                                pergunta1_1_1 = document.querySelector('.text').textContent = ("Ela chega até o banheiro, fecha a porta e acende a luz e dá de cara com uma mulher de longos cabelos negros molhados e sem feições no rosto, andando em direção a ela.\nEla tenta abrir a porta mas está emperrada, mas continua tentando enquanto grita.\n\nChega alguém para ajudá-la?\n \nDigite:\n1 para sim;\n2 para não.");
+                                pergunta1_1_1 = document.querySelector('.text').innerHTML = ("Ela chega até o banheiro, fecha a porta e acende a luz e dá de cara com uma mulher de longos cabelos negros molhados e sem feições no rosto, andando em direção a ela.<br>Ela tenta abrir a porta mas está emperrada, mas continua tentando enquanto grita.<br><br>Chega alguém para ajudá-la?<br><br>Digite:<br>1 para sim;<br>2 para não.");
 
                                 function perguntas3() {
 
@@ -83,27 +84,36 @@
 
                                         removeInput = input2.remove();
 
-                                        final3 = document.querySelector('.text').textContent = ('A governanta da casa chega e abre a porta, ela sai do banheiro e conta o que aconteceu, a governanta verifica o banheiro e não vê nada, cada uma volta para o seu quarto. \nNa manhã seguinte Flora fala de forma misteriosa "você não deveria ter saído, agora ela te conhece".\n \nDani está salva... por enquanto.');
+                                        final3 = document.querySelector('.text').innerHTML = ('A governanta da casa chega e abre a porta, ela sai do banheiro e conta o que aconteceu, a governanta verifica o banheiro e não vê nada, cada uma volta para o seu quarto. <br>Na manhã seguinte Flora fala de forma misteriosa "você não deveria ter saído, agora ela te conhece".<br><br>Dani está salva... por enquanto.');
 
-                                        var button = document.querySelector("button").textContent = ("Jogue Novamente");
+                                        var button = document.querySelector("button").textContent = ("Jogue novamente");
+                                        button.onclick = function(){
+                                            document.location.reload(true);
+                                        }
 
                                     }
                                     else if (input2.value == '2') {
 
                                         removeInput = input2.remove();
 
-                                        final4 = document.querySelector('.text').textContent = ('A mulher a estrangula, levantando-a contra a porta, até que ela perde a consciência lentamente.\nSeu corpo é arrastado até a floresta, onde a mulher a esconde. \n\nDani está morta.');
+                                        final4 = document.querySelector('.text').innerHTML = ('A mulher a estrangula, levantando-a contra a porta, até que ela perde a consciência lentamente.<br>Seu corpo é arrastado até a floresta, onde a mulher a esconde. <br><br>Dani está morta.');
 
-                                        var button = document.querySelector("button").textContent = ("Jogue Novamente");
+                                        var button = document.querySelector("button").textContent = ("Jogue novamente");
+                                        button.onclick = function(){
+                                            document.location.reload(true);
+                                        }
 
                                     }
                                     else {
 
                                         removeInput = input2.remove();
 
-                                        final5 = document.querySelector('.text').textContent = ("Dani pega uma escova de dente e enfia no olho da mulher, tenta abrir a porta de novo e consegue; ela corre até seu quarto.\nNo dia seguinte Flora está chateada com Dani e diz 'Você não deveria ter saído, agora ela te conhece.'\n \nDani está salva... por enquanto.")
+                                        final5 = document.querySelector('.text').innerHTML = ("Dani pega uma escova de dente e enfia no olho da mulher, tenta abrir a porta de novo e consegue; ela corre até seu quarto.<br>No dia seguinte Flora está chateada com Dani e diz 'Você não deveria ter saído, agora ela te conhece.'<br><br>Dani está salva... por enquanto.")
 
-                                        var button = document.querySelector("button").textContent = ("Jogue Novamente");
+                                        var button = document.querySelector("button").textContent = ("Jogue novamente");
+                                        button.onclick = function(){
+                                            document.location.reload(true);
+                                        }
 
                                     }
 
@@ -120,9 +130,10 @@
 
                                 removeInput = input2.remove();
 
-                                final6 = document.querySelector('.text').textContent = ("Dani demora demais para tomar uma decisão, uma mulher de longos cabelos negros molhados vem correndo em sua direção, então agarra Dani pelo pescoço, a arrasta até a escadaria e a joga. Dani cai escada abaixo, na queda ela quebra o pescoço.\n \nDani está morta.");
+                                final6 = document.querySelector('.text').innerHTML = ("Dani demora demais para tomar uma decisão, uma mulher de longos cabelos negros molhados vem correndo em sua direção, então agarra Dani pelo pescoço, a arrasta até a escadaria e a joga. Dani cai escada abaixo, na queda ela quebra o pescoço.<br><br>Dani está morta.");
 
-                                var button = document.querySelector("button").textContent = ("Jogue Novamente");
+                                var button = document.querySelector("button").textContent = ("Jogue novamente");
+                                
 
                             }
 
@@ -136,12 +147,12 @@
 
                     }
                     else if (input2.value == '2') {
-                        pergunta2 = document.querySelector('.text').textContent = ("Ela fica deitada na cama e espera até o dia amanhecer; na manhã seguinte Flora está feliz com ela por ter cumprido a promessa. \nA noite chega de novo e ela vai dormir, até que acorda quando ouve um grito.\n\nEla sai para ver o que é?\n \nDigite:\n1 para sim;\n2 para não.");
+                        pergunta2 = document.querySelector('.text').innerHTML = ("Ela fica deitada na cama e espera até o dia amanhecer; na manhã seguinte Flora está feliz com ela por ter cumprido a promessa. <br>A noite chega de novo e ela vai dormir, até que acorda quando ouve um grito.<br><br>Ela sai para ver o que é?<br><br>Digite:<br>1 para sim;<br>2 para não.");
 
                         function perguntas4() {
 
                             if (input2.value == '1') {
-                                pergunta2_1 = document.querySelector('.text').textContent = ('Ela corre até o quarto das crianças mas os dois estão dormindo tranquilamente.\nQuando vira-se para voltar ao seu quarto, é surpreendida por uma mulher de longos cabelos negros molhados. Ela a pega pelo pescoço e a levanta, ela fica tentando fazer com que ela a solte.\n \nEla consegue se soltar?\n \nDigite:\n1 para sim;\n2 para não.');
+                                pergunta2_1 = document.querySelector('.text').innerHTML = ('Ela corre até o quarto das crianças mas os dois estão dormindo tranquilamente.\nQuando vira-se para voltar ao seu quarto, é surpreendida por uma mulher de longos cabelos negros molhados. Ela a pega pelo pescoço e a levanta, ela fica tentando fazer com que ela a solte.<br><br>Ela consegue se soltar?<br><br>Digite:<br>1 para sim;<br>2 para não.');
 
                                 function perguntas5() {
 
@@ -149,27 +160,30 @@
 
                                         removeInput = input2.remove();
 
-                                        final7 = document.querySelector('.text').textContent = ('Ela volta correndo para o quarto e tranca a porta, deita na cama e demora até cair no sono de novo. No dia seguinte Flora diz com um olhar misterioso "Não caia nos truques dela na próxima vez, agora ela te conhece."\n \nDani está salva... por enquanto.');
+                                        final7 = document.querySelector('.text').innerHTML = ('Ela volta correndo para o quarto e tranca a porta, deita na cama e demora até cair no sono de novo. No dia seguinte Flora diz com um olhar misterioso "Não caia nos truques dela na próxima vez, agora ela te conhece."<br><br>Dani está salva... por enquanto.');
 
-                                        var button = document.querySelector("button").textContent = ("Jogue Novamente");
+                                        var button = document.querySelector("button").textContent = ("Jogue novamente");
+                                        button = document.location.reload(true);
 
                                     }
                                     else if (input2.value == '2') {
 
                                         removeInput = input2.remove();
 
-                                        final8 = document.querySelector('.text').textContent = ('A mulher a estrangula até que ela começa a perder a consciência lentamente.\nSeu corpo é arrastado até a floresta, onde a mulher a esconde.\n \nDani está morta.');
+                                        final8 = document.querySelector('.text').innerHTML = ('A mulher a estrangula até que ela começa a perder a consciência lentamente.<br>Seu corpo é arrastado até a floresta, onde a mulher a esconde.<br><br>Dani está morta.');
 
-                                        var button = document.querySelector("button").textContent = ("Jogue Novamente");
+                                        var button = document.querySelector("button").textContent = ("Jogue novamente");
+                                        button = document.location.reload(true);
 
                                     }
                                     else {
 
                                         removeInput = input2.remove();
 
-                                        final9 = document.querySelector('.text').textContent = ("Dani levanta-se da cama e vai até a janela, perto do lago ela vê uma silhueta que parece a de uma mulher.\nQuando ela se vira para o lado, vê uma mulher de longos cabelos negros molhados. A mulher fica parada olhando para Dani sem fazer nada, até que abre a boca e diz com uma voz rouca 'pule.' Dani é tomada por um desejo que não é seu, então abre a janela e pula.\n \nDani está morta.");
+                                        final9 = document.querySelector('.text').innerHTML = ("Dani levanta-se da cama e vai até a janela, perto do lago ela vê uma silhueta que parece a de uma mulher.<br>Quando ela se vira para o lado, vê uma mulher de longos cabelos negros molhados. A mulher fica parada olhando para Dani sem fazer nada, até que abre a boca e diz com uma voz rouca 'pule.' Dani é tomada por um desejo que não é seu, então abre a janela e pula.<br><br>Dani está morta.");
 
-                                        var button = document.querySelector("button").textContent = ("Jogue Novamente");
+                                        var button = document.querySelector("button").textContent = ("Jogue novamente");
+                                        button = document.location.reload(true);
 
                                     }
 
@@ -185,9 +199,10 @@
 
                                 removeInput = input2.remove();
 
-                                final10 = document.querySelector('.text').textContent = ("Ela se sente culpada, mas fica paralizada de medo na cama. No dia seguinte todos estão bem e ninguém ouviu grito nenhum. \nFlora está feliz com ela por cumprir sua promessa.\n \nDani está salva.");
+                                final10 = document.querySelector('.text').innerHTML = ("Ela se sente culpada, mas fica paralizada de medo na cama. No dia seguinte todos estão bem e ninguém ouviu grito nenhum. <br>Flora está feliz com ela por cumprir sua promessa.<br><br>Dani está salva.");
 
-                                var button = document.querySelector("button").textContent = ("Jogue Novamente");
+                                var button = document.querySelector("button").textContent = ("Jogue novamente");
+                                button = document.location.reload(true);
 
                             }
 
@@ -204,9 +219,10 @@
 
                         removeInput = input2.remove();
 
-                        final1 = document.querySelector('.text').textContent = ("Dani levanta-se da cama e vai até a janela, perto do lago ela vê uma silhueta que parece a de uma mulher. \nQuando ela se vira, vê uma mulher de longos cabelos negros molhados. Antes que possa fazer qualquer coisa, a mulher pega Dani pelo pescoço e pula com ela pela janela. Ela então coloca uma corda em seu pescoço, Dani se debate até que lentamente perde a consciência.\n \nDani está morta.");
+                        final1 = document.querySelector('.text').innerHTML = ("Dani levanta-se da cama e vai até a janela, perto do lago ela vê uma silhueta que parece a de uma mulher. <br>Quando ela se vira, vê uma mulher de longos cabelos negros molhados. Antes que possa fazer qualquer coisa, a mulher pega Dani pelo pescoço e pula com ela pela janela. Ela então coloca uma corda em seu pescoço, Dani se debate até que lentamente perde a consciência.<br><br>Dani está morta.");
 
-                        var button = document.querySelector("button").textContent = ("Jogue Novamente");
+                        var button = document.querySelector("button").textContent = ("Jogue novamente");
+                        button = document.location.reload(true);
 
                     }
 
